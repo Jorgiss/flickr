@@ -4,6 +4,7 @@ Run instructions:
 Clone, build, Run
 
 Working functionality:
+
 1. Infinite Scroll
 2. Flexible Navigation bar
 3. Flickr Image Browser with titles and images
