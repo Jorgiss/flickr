@@ -51,8 +51,9 @@ class APIRequest: NSObject {
         session.dataTaskWithRequest(apiRequest) { (data, response, error) in
             if let data = data {
                 let parsedData = try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
-                completion(parsedData as? Dictionary<String, AnyObject>)
-
+                dispatch_async(dispatch_get_main_queue()) {
+                    completion(parsedData as? Dictionary<String, AnyObject>)
+                }
             }
         }.resume()
     }

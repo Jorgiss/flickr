@@ -8,16 +8,36 @@
 
 import UIKit
 
-class ImageMetadata: NSObject {
+class ImageMetadata: NSObject, Cachable {
     init(dictionary:Dictionary<String, AnyObject>) {
-        farm = dictionary["key"] as? String
+        farm = dictionary["farm"] as? Int
         server = dictionary["server"] as? String
         id = dictionary["id"] as? String
         secret = dictionary["secret"] as? String
+        title = dictionary["title"] as? String
+        print(dictionary)
+        print(farm)
+        print(server)
+        print(id)
+        print(secret)
+        
     }
-    var farm:String?
+    var title:String?
+    var farm:Int?
     var server:String?
     var secret:String?
     var id:String?
     
+    var imageURL:String {
+        guard let farm = farm, let server = server, let id = id, let secret = secret else{
+            print("Invalid metadata")
+            
+            return ""
+        }
+        return "http://farm\(farm).static.flickr.com/\(server)/\(id)_\(secret).jpg"
+    }
+    
+    func fetchImage(completion:(UIImage?)->()) {
+        return self[imageURL, completion]
+    }
 }

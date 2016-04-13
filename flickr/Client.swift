@@ -38,5 +38,14 @@ class Client: NSObject {
         }
         return NSTemporaryDirectory().stringByAppendingString("realm.realm")
     }
-    
+    class func backgroundThread(closure:()->()) {
+        dispatch_async(dispatch_get_global_queue( QOS_CLASS_UTILITY, 0), {
+            closure()
+        })
+    }
+    class func mainThread(closure:()->()) {
+        dispatch_async(dispatch_get_main_queue()) {
+            closure()
+        }
+    }
 }
