@@ -18,6 +18,9 @@ class RootViewController: UITableViewController, ShyNavigationBarViewController,
         tableView.registerClass(ImageTableViewCell.self, forCellReuseIdentifier: NSStringFromClass(ImageTableViewCell))
         
         navigationItem.titleView = searchBar
+        
+        searchText = "F8"
+        fetchImages()
     }
     
     private lazy var searchBar:UISearchBar = {
@@ -96,5 +99,10 @@ class RootViewController: UITableViewController, ShyNavigationBarViewController,
         }
         cell.imageMetadata = images[indexPath.row]
         return cell
+    }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let imageViewController = ImageViewController()
+        imageViewController.image = images[indexPath.row]
+        navigationController?.presentViewController(UINavigationController(rootViewController:imageViewController), animated: true, completion: nil)
     }
 }

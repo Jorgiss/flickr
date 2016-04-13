@@ -11,6 +11,7 @@
 		091C2E761CBEE983003B90AC /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091C2E751CBEE983003B90AC /* ImageTableViewCell.swift */; };
 		091C2E781CBEEE2B003B90AC /* CachableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091C2E771CBEEE2B003B90AC /* CachableProtocol.swift */; };
 		091C2E7A1CBEFAB0003B90AC /* ShyNavigationBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091C2E791CBEFAB0003B90AC /* ShyNavigationBarProtocol.swift */; };
+		091C2E7C1CBF02C5003B90AC /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091C2E7B1CBF02C5003B90AC /* ImageViewController.swift */; };
 		099A338F1CBECFDF00B6F586 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099A338E1CBECFDF00B6F586 /* AppDelegate.swift */; };
 		099A33961CBECFDF00B6F586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099A33951CBECFDF00B6F586 /* Assets.xcassets */; };
 		099A33991CBECFDF00B6F586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099A33971CBECFDF00B6F586 /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 		091C2E751CBEE983003B90AC /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		091C2E771CBEEE2B003B90AC /* CachableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachableProtocol.swift; sourceTree = "<group>"; };
 		091C2E791CBEFAB0003B90AC /* ShyNavigationBarProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShyNavigationBarProtocol.swift; sourceTree = "<group>"; };
+		091C2E7B1CBF02C5003B90AC /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		099A338B1CBECFDF00B6F586 /* flickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		099A338E1CBECFDF00B6F586 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		099A33951CBECFDF00B6F586 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				091C2E771CBEEE2B003B90AC /* CachableProtocol.swift */,
 				091C2E751CBEE983003B90AC /* ImageTableViewCell.swift */,
 				099A33BC1CBED01A00B6F586 /* RootViewController.swift */,
+				091C2E7B1CBF02C5003B90AC /* ImageViewController.swift */,
 				091C2E791CBEFAB0003B90AC /* ShyNavigationBarProtocol.swift */,
 				099A33951CBECFDF00B6F586 /* Assets.xcassets */,
 				099A33971CBECFDF00B6F586 /* LaunchScreen.storyboard */,
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				099A33BD1CBED01A00B6F586 /* RootViewController.swift in Sources */,
+				091C2E7C1CBF02C5003B90AC /* ImageViewController.swift in Sources */,
 				099A33BF1CBED26B00B6F586 /* APIRequest.swift in Sources */,
 				099A33C11CBED6D100B6F586 /* ImageMetadata.swift in Sources */,
 				091C2E761CBEE983003B90AC /* ImageTableViewCell.swift in Sources */,

@@ -62,6 +62,9 @@ class APIRequest: NSObject {
                     completion(parsedData as? Dictionary<String, AnyObject>)
                 }
             }
+            if let error = error {
+                print(error)
+            }
         }.resume()
     }
 }
