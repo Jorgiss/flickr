@@ -15,12 +15,6 @@ class ImageMetadata: NSObject, Cachable {
         id = dictionary["id"] as? String
         secret = dictionary["secret"] as? String
         title = dictionary["title"] as? String
-        print(dictionary)
-        print(farm)
-        print(server)
-        print(id)
-        print(secret)
-        
     }
     var title:String?
     var farm:Int?

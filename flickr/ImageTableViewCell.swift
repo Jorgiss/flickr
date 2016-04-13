@@ -23,6 +23,8 @@ class ImageTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        imageView?.contentMode = .ScaleAspectFill
+        imageView?.clipsToBounds = true
         imageView?.frame = CGRectMake(0, 0, frame.width, frame.height-55)
         textLabel?.frame = CGRectMake(20, frame.height-55, frame.width-40, 55)
         textLabel?.numberOfLines = 2

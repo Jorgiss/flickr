@@ -12,9 +12,16 @@ let baseURL = "https://api.flickr.com/services/rest/"
 ///?method=flickr.photos.search&api_key=907dea022b0dfc2ec993df236bc0fe6c&text=wall&format=json&nojsoncallback=1&auth_token=72157664827692513-80f0a0ad1bbabe1c&api_sig=ba52af727b909647aeae3e52d86be19d
 
 extension APIRequest {
-    func findImagesRequest(completion:([ImageMetadata])->()) -> Void {
+    func findImagesRequest(text:String, page:Int? = nil, pageSize:Int? = nil, completion:([ImageMetadata])->()) -> Void {
         method = "flickr.photos.search"
-        params = "&text=wall"
+        if let encodedString = text.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()) {
+            params = "&text=\(encodedString))"
+        }
+        
+        if let page = page, let pageSize = pageSize {
+            params.appendContentsOf("&per_page=\(pageSize)&page=\(page)")
+        }
+
         performRequest { (object) in
             guard let photos = object?["photos"] as? Dictionary<String, AnyObject> else {
                 return
