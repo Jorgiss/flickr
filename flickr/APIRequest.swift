@@ -15,7 +15,15 @@ extension APIRequest {
     func findImagesRequest(completion:([ImageMetadata])->()) -> Void {
         method = "flickr.photos.search"
         params = "&text=wall"
-        performRequest()
+        performRequest { (object) in
+            guard let photos = object?["photos"] as? Dictionary<String, AnyObject> else {
+                return
+            }
+            guard let photosArray = photos["photo"] as? [Dictionary<String, AnyObject>] else {
+                return
+            }
+            completion(photosArray.map({ImageMetadata(dictionary: $0)}))
+        }
     }
 }
 
@@ -38,14 +46,12 @@ class APIRequest: NSObject {
         return request
     }
 
-    func performRequest(){
-        print(requestURL)
+    func performRequest(completion:(Dictionary<String, AnyObject>?)->()){
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         session.dataTaskWithRequest(apiRequest) { (data, response, error) in
-            print(data)
             if let data = data {
                 let parsedData = try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
-                print(parsedData)
+                completion(parsedData as? Dictionary<String, AnyObject>)
 
             }
         }.resume()
