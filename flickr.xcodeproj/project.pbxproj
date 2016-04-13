@@ -13,6 +13,8 @@
 		099A33A41CBECFE000B6F586 /* flickrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099A33A31CBECFE000B6F586 /* flickrTests.swift */; };
 		099A33AF1CBECFE000B6F586 /* flickrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099A33AE1CBECFE000B6F586 /* flickrUITests.swift */; };
 		099A33BD1CBED01A00B6F586 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099A33BC1CBED01A00B6F586 /* RootViewController.swift */; };
+		099A33BF1CBED26B00B6F586 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099A33BE1CBED26B00B6F586 /* APIRequest.swift */; };
+		099A33C11CBED6D100B6F586 /* ImageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099A33C01CBED6D100B6F586 /* ImageMetadata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		099A33AE1CBECFE000B6F586 /* flickrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flickrUITests.swift; sourceTree = "<group>"; };
 		099A33B01CBECFE000B6F586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		099A33BC1CBED01A00B6F586 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		099A33BE1CBED26B00B6F586 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		099A33C01CBED6D100B6F586 /* ImageMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMetadata.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				099A338E1CBECFDF00B6F586 /* AppDelegate.swift */,
+				099A33BE1CBED26B00B6F586 /* APIRequest.swift */,
+				099A33C01CBED6D100B6F586 /* ImageMetadata.swift */,
 				099A33BC1CBED01A00B6F586 /* RootViewController.swift */,
 				099A33951CBECFDF00B6F586 /* Assets.xcassets */,
 				099A33971CBECFDF00B6F586 /* LaunchScreen.storyboard */,
@@ -253,6 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				099A33BD1CBED01A00B6F586 /* RootViewController.swift in Sources */,
+				099A33BF1CBED26B00B6F586 /* APIRequest.swift in Sources */,
+				099A33C11CBED6D100B6F586 /* ImageMetadata.swift in Sources */,
 				099A338F1CBECFDF00B6F586 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +480,7 @@
 				099A33B51CBECFE000B6F586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		099A33B61CBECFE000B6F586 /* Build configuration list for PBXNativeTarget "flickrTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +489,7 @@
 				099A33B81CBECFE000B6F586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		099A33B91CBECFE000B6F586 /* Build configuration list for PBXNativeTarget "flickrUITests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +498,7 @@
 				099A33BB1CBECFE000B6F586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

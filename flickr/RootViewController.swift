@@ -12,7 +12,9 @@ class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        APIRequest().findImagesRequest { (objects) in
+            print(objects)
+        }
         // Do any additional setup after loading the view.
     }
 
